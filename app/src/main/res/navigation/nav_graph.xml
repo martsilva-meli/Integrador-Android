@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_termsFragment"
             app:destination="@id/termsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_activitiesFragment"
+            app:destination="@id/activitiesFragment" />
     </fragment>
     <fragment
         android:id="@+id/termsFragment"
@@ -21,6 +24,18 @@
         tools:layout="@layout/fragment_terms" >
         <action
             android:id="@+id/action_termsFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/activitiesFragment"
+        android:name="com.example.integradorandroid.ui.main.ActivitiesFragment"
+        android:label="fragment_activities_list"
+        tools:layout="@layout/fragment_activities_list" >
+        <argument
+            android:name="participants"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
 </navigation>

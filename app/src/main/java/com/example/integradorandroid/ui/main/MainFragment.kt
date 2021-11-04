@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.get
 import androidx.navigation.fragment.findNavController
 import com.example.integradorandroid.R
 import com.example.integradorandroid.databinding.FragmentTermsBinding
@@ -34,6 +35,10 @@ class MainFragment : Fragment() {
 
         binding.tvTerms.setOnClickListener {
             val action = MainFragmentDirections.actionMainFragmentToTermsFragment()
+            findNavController().navigate(action)
+        }
+        binding.btnStart.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToActivitiesFragment(participants = binding.etParticipants.text.toString().toInt())
             findNavController().navigate(action)
         }
     }
