@@ -10,12 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IntegradorAndroid">
         <activity
-            android:name=".ui.main.Category"
-            android:exported="false" />
-        <activity
-            android:name=".ui.main.ListActivities"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
