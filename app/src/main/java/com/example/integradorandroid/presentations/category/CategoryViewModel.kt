@@ -13,8 +13,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class CategoryViewModel constructor(
-    private val repository : RepositoryActivities
-) : ViewModel(){
+    private val repository: RepositoryActivities
+) : ViewModel() {
 
     /**
      * _activities = esta variable se encarga de almacenar los datos
@@ -24,10 +24,10 @@ class CategoryViewModel constructor(
      * fuera del viewmodel
      */
     private val _activities = MutableLiveData<StatusResponse<TypeActivities>>()
-    val activities : LiveData<StatusResponse<TypeActivities>>
+    val activities: LiveData<StatusResponse<TypeActivities>>
         get() = _activities
 
-    fun getActivities(type : String? = null){
+    fun getActivities(type: String? = null) {
         _activities.value = StatusResponse(TypeStatus.LOADING)
         viewModelScope.launch {
             withContext(Dispatchers.IO) {

@@ -20,10 +20,10 @@ class CategoryFragment : Fragment() {
 
     private lateinit var binding: FragmentCategoryBinding
     private var participantsCount = 0
-    private var category : String? = null
+    private var category: String? = null
 
     // instancia del View Model
-    private val viewModel : CategoryViewModel by viewModels(
+    private val viewModel: CategoryViewModel by viewModels(
         factoryProducer = {
             CategoryViewModelFactory()
         }
@@ -31,7 +31,6 @@ class CategoryFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         arguments?.let {
             participantsCount = it.getInt(ActivitiesFragment.PARTICIPANTS)
             category = it.getString(ActivitiesFragment.CATEGORY)
@@ -71,39 +70,43 @@ class CategoryFragment : Fragment() {
     private fun setObserver() {
         // funcion para observar un cambio de estado en la variable activities
         viewModel.activities.observe(viewLifecycleOwner, Observer {
-           when(it.status){
-               TypeStatus.LOADING -> {
-                   showAndHideElements(false)
-               }
-               TypeStatus.SUCCESS -> {
-                   showAndHideElements(true)
-                   it.response?.let {
-                       // with es para acceder a todos los elementos del binding
-                       with(binding){
-                           titleCategory.text = it.activities
-                           txtNumberparticipants.text = it.participants.toString()
-                           txtPrice.text = priceFormat(it.price)
-                           category?.let {
-                               relativeRelaxation.visibility = View.GONE
-                           } ?: run {
-                               relativeRelaxation.visibility = View.VISIBLE
-                               txtRelaxation.text = it.type
-                           }
-                       }
-                   }
-               }
-               TypeStatus.ERROR -> {
-                   binding.progressBar.visibility = View.GONE
-                   Toast.makeText(context, getString(R.string.label_error_api), Toast.LENGTH_SHORT).show()
-                   val action = CategoryFragmentDirections.actionCategoryFragmentToActivitiesFragment(participants = participantsCount)
-                   findNavController().navigate(action)
-               }
-           }
+            when (it.status) {
+                TypeStatus.LOADING -> {
+                    showAndHideElements(false)
+                }
+                TypeStatus.SUCCESS -> {
+                    showAndHideElements(true)
+                    it.response?.let {
+                        // with es para acceder a todos los elementos del binding
+                        with(binding) {
+                            titleCategory.text = it.activities
+                            txtNumberparticipants.text = participantsCount.toString()
+                            txtPrice.text = priceFormat(it.price)
+                            category?.let {
+                                relativeRelaxation.visibility = View.GONE
+                            } ?: run {
+                                relativeRelaxation.visibility = View.VISIBLE
+                                txtRelaxation.text = it.type
+                            }
+                        }
+                    }
+                }
+                TypeStatus.ERROR -> {
+                    binding.progressBar.visibility = View.GONE
+                    Toast.makeText(context, getString(R.string.label_error_api), Toast.LENGTH_SHORT)
+                        .show()
+                    val action =
+                        CategoryFragmentDirections.actionCategoryFragmentToActivitiesFragment(
+                            participants = participantsCount
+                        )
+                    findNavController().navigate(action)
+                }
+            }
         })
     }
 
-    private fun priceFormat(price : Double) : String{
-        return when(price){
+    private fun priceFormat(price: Double): String {
+        return when (price) {
             0.0 -> "Free"
             in 0.1..0.3 -> "Low"
             in 0.4..0.6 -> "Medium"
@@ -111,8 +114,8 @@ class CategoryFragment : Fragment() {
         }
     }
 
-    private fun showAndHideElements(active : Boolean){
-        with(binding){
+    private fun showAndHideElements(active: Boolean) {
+        with(binding) {
             titleCategory.isVisible = active
             relativeParticipants.isVisible = active
             relativePrice.isVisible = active

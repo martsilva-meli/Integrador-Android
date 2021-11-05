@@ -6,8 +6,6 @@
     android:name="com.example.integradorandroid.ui.main.ActivitiesFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     android:background="#DFF6FE"
     app:layoutManager="LinearLayoutManager"
     tools:context=".presentations.activities.ActivitiesFragment"
