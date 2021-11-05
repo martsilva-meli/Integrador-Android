@@ -1,13 +1,12 @@
-package com.example.integradorandroid.ui.main
+package com.example.integradorandroid.presentations.terms
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.findNavController
 import com.example.integradorandroid.databinding.FragmentActivitiesBinding
 
-import com.example.integradorandroid.ui.main.placeholder.ActivityContent.ActivityItem
+import com.example.integradorandroid.presentations.terms.placeholder.ActivityContent.ActivityItem
 
 /**
  * [RecyclerView.Adapter] that can display a [ActivityItem].

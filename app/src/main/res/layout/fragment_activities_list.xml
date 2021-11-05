@@ -10,5 +10,5 @@
     android:layout_marginRight="16dp"
     android:background="#DFF6FE"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".ui.main.ActivitiesFragment"
+    tools:context=".presentations.terms.ActivitiesFragment"
     tools:listitem="@layout/fragment_activities" />

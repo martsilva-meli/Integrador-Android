@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/activitiesFragment"
-        android:name="com.example.integradorandroid.ui.main.ActivitiesFragment"
+        android:name="com.example.integradorandroid.presentations.terms.ActivitiesFragment"
         android:label="fragment_activities_list"
         tools:layout="@layout/fragment_activities_list" >
         <argument

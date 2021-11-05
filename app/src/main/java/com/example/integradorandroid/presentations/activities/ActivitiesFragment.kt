@@ -1,4 +1,4 @@
-package com.example.integradorandroid.ui.main
+package com.example.integradorandroid.presentations.terms
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.integradorandroid.R
-import com.example.integradorandroid.ui.main.placeholder.ActivityContent
+import com.example.integradorandroid.presentations.terms.placeholder.ActivityContent
 
 /**
  * A fragment representing a list of Items.

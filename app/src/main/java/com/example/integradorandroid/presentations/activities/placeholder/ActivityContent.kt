@@ -1,4 +1,4 @@
-package com.example.integradorandroid.ui.main.placeholder
+package com.example.integradorandroid.presentations.terms.placeholder
 
 import java.util.ArrayList
 import java.util.HashMap
