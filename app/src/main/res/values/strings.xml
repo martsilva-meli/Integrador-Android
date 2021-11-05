@@ -8,4 +8,5 @@
     <string name="price">Price</string>
     <string name="relaxation">Relaxation</string>
     <string name="button">Try another</string>
+    <string name="label_error_api">Error al consultar Actividad</string>
 </resources>
