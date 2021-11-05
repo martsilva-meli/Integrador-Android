@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/light_blue"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
     tools:context=".presentations.terms.TermsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
 
+    <ImageButton
+        android:id="@+id/btnX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="140dp"
+        android:backgroundTint="@color/light_blue"
+        android:src="@drawable/ic_cancel"
+ />
+
     <TextView
         android:id="@+id/tvTerms2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="10dp"
         android:text="@string/terms_and_conditions"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.317"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
     <TextView
         android:id="@+id/tvAppName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="50dp"
         android:text="@string/not_bored"
         android:textColor="@color/blue"
         android:textSize="34sp"
@@ -37,24 +47,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTerms2" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        tools:ignore="MissingConstraints">
     <TextView
         android:id="@+id/tvLorem"
         android:layout_width="276dp"
         android:layout_height="425dp"
-        android:text="Lorem ipsum"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAppName2" />
+        android:text="@string/lorem_ipsum"
+        android:layout_gravity="center_horizontal"
+        />
+    </ScrollView>
 
-    <ImageButton
-        android:id="@+id/btnX"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
-        android:src="@android:drawable/btn_dialog"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

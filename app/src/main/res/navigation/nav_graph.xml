@@ -48,7 +48,9 @@
         tools:layout="@layout/fragment_category" >
         <action
             android:id="@+id/action_categoryFragment_to_activitiesFragment"
-            app:destination="@id/activitiesFragment" />
+            app:destination="@id/activitiesFragment"
+            app:popUpTo="@id/activitiesFragment"
+            app:popUpToInclusive="true" />
         <argument
             android:name="participants"
             app:argType="integer" />

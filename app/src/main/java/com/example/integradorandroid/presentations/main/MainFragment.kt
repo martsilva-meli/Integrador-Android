@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 import androidx.navigation.fragment.findNavController
 import com.example.integradorandroid.databinding.MainFragmentBinding
@@ -14,9 +15,6 @@ class MainFragment : Fragment() {
     private var _binding: MainFragmentBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,6 +22,7 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = MainFragmentBinding.inflate(inflater, container, false)
+        (activity as AppCompatActivity).supportActionBar?.title = "Not Bored"
         return binding.root
     }
 
