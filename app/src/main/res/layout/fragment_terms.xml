@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DFF6FE"
-    tools:context=".ui.main.TermsFragment">
+    android:background="@color/light_blue"
+    tools:context=".presentations.terms.TermsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="@string/not_bored"
-        android:textColor="#209DED"
+        android:textColor="@color/blue"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

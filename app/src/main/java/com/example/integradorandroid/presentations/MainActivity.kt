@@ -1,12 +1,12 @@
-package com.example.integradorandroid
+package com.example.integradorandroid.presentations
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.integradorandroid.R
 import com.example.integradorandroid.databinding.MainActivityBinding
-import com.example.integradorandroid.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController

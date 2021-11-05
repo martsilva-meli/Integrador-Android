@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DFF6FE"
-    tools:context=".ui.main.MainFragment">
+    android:background="@color/light_blue"
+    tools:context=".presentations.main.MainFragment">
 
     <TextView
         android:id="@+id/tvAppName"
@@ -15,7 +15,7 @@
         android:layout_marginTop="204dp"
         android:letterSpacing="0"
         android:text="@string/not_bored"
-        android:textColor="#03A9F4"
+        android:textColor="@color/blue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="100dp"
-        android:backgroundTint="#209DED"
+        android:backgroundTint="@color/blue"
         android:text="Start"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.integradorandroid.ui.main.MainFragment"
+        android:name="com.example.integradorandroid.presentations.main.MainFragment"
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/termsFragment"
-        android:name="com.example.integradorandroid.ui.main.TermsFragment"
+        android:name="com.example.integradorandroid.presentations.terms.TermsFragment"
         android:label="fragment_terms"
         tools:layout="@layout/fragment_terms" >
         <action
