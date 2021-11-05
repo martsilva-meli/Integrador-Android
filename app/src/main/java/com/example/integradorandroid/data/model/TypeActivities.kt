@@ -8,5 +8,5 @@ data class TypeActivities(
     @SerializedName("price") val price : Double,
     @SerializedName("link") val link : String,
     @SerializedName("key") val key : Int,
-    @SerializedName("accessibility") val accessibility : Int
+    @SerializedName("accessibility") val accessibility : Double
 )
