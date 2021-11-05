@@ -1,4 +1,4 @@
-package com.example.integradorandroid.ui.main
+package com.example.integradorandroid.presentations.main
 
 import androidx.lifecycle.ViewModel
 
