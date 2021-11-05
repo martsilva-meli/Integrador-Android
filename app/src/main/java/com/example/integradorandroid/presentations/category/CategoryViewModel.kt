@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.integradorandroid.data.StatusResponse
+import com.example.integradorandroid.data.response.StatusResponse
 import com.example.integradorandroid.data.model.TypeActivities
 import com.example.integradorandroid.data.response.TypeStatus
 import com.example.integradorandroid.domain.repository.RepositoryActivities
