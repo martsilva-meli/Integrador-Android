@@ -30,12 +30,31 @@
     </fragment>
     <fragment
         android:id="@+id/activitiesFragment"
-        android:name="com.example.integradorandroid.presentations.terms.ActivitiesFragment"
+        android:name="com.example.integradorandroid.presentations.activities.ActivitiesFragment"
         android:label="fragment_activities_list"
         tools:layout="@layout/fragment_activities_list" >
         <argument
             android:name="participants"
             app:argType="integer"
             android:defaultValue="1" />
+        <action
+            android:id="@+id/action_activitiesFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.integradorandroid.presentations.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_activitiesFragment"
+            app:destination="@id/activitiesFragment" />
+        <argument
+            android:name="participants"
+            app:argType="integer" />
+        <argument
+            android:name="category"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>

@@ -7,17 +7,29 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.integradorandroid.databinding.FragmentCategoryBinding
+import com.example.integradorandroid.presentations.activities.ActivitiesFragment
 
 class CategoryFragment : Fragment() {
 
     private lateinit var binding: FragmentCategoryBinding
-    
+    private var participantsCount = 0
+    private var category : String? = null
+
     // instancia del View Model
     private val viewModel : CategoryViewModel by viewModels(
         factoryProducer = {
             CategoryViewModelFactory()
         }
     )
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        arguments?.let {
+            participantsCount = it.getInt(ActivitiesFragment.PARTICIPANTS)
+            category = it.getString(ActivitiesFragment.CATEGORY)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

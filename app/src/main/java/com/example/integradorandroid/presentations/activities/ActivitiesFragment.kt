@@ -1,4 +1,4 @@
-package com.example.integradorandroid.presentations.terms
+package com.example.integradorandroid.presentations.activities
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.integradorandroid.R
-import com.example.integradorandroid.presentations.terms.placeholder.ActivityContent
+import com.example.integradorandroid.presentations.activities.placeholder.ActivityContent
 
 /**
  * A fragment representing a list of Items.
@@ -43,8 +43,7 @@ class ActivitiesFragment : Fragment() {
     }
 
     companion object {
-
         const val PARTICIPANTS = "participants"
-
+        const val CATEGORY = "category"
     }
 }

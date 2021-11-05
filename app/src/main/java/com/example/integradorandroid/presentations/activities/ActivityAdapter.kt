@@ -1,12 +1,12 @@
-package com.example.integradorandroid.presentations.terms
+package com.example.integradorandroid.presentations.activities
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import com.example.integradorandroid.databinding.FragmentActivitiesBinding
-
-import com.example.integradorandroid.presentations.terms.placeholder.ActivityContent.ActivityItem
+import com.example.integradorandroid.presentations.activities.placeholder.ActivityContent.ActivityItem
 
 /**
  * [RecyclerView.Adapter] that can display a [ActivityItem].
@@ -32,8 +32,8 @@ class ActivityAdapter(
         val item = values[position]
         holder.contentView.text = item.type
         holder.contentView.setOnClickListener {
-            //val action = ActivitiesFragmentDirections.actionActivitiesFragmentToSuggestionFragment(participants = participants, type= item.type)
-            //holder.contentView.findNavController().navigate(action)
+            val action = ActivitiesFragmentDirections.actionActivitiesFragmentToCategoryFragment(participants = participants, category = item.type)
+            holder.contentView.findNavController().navigate(action)
         }
     }
 
